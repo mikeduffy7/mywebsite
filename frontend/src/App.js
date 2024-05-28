@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Navbar from './Navbar.js';
 import axios from 'axios';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <div>
+      <Navbar />
       <h1>{data ? data.message : 'Loading...'}</h1>
       <button onClick={postData}>Send Data</button>
     </div>
