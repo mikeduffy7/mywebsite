@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Navbar from './Navbar.js';
+import './App.css';
 import axios from 'axios';
 
 function App() {
@@ -18,10 +19,13 @@ function App() {
   };
 
   return (
-    <div>
+    <div className='App'>
+      <h1 className='title'>The House That Horror Built</h1>
       <Navbar />
-      <h1>{data ? data.message : 'Loading...'}</h1>
-      <button onClick={postData}>Send Data</button>
+      <div>
+        <h1>{data ? data.message : 'Loading...'}</h1>
+        <button onClick={postData}>Send Data</button>
+      </div> 
     </div>
   );
 }
